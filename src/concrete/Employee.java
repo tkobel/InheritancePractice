@@ -9,4 +9,20 @@ public class Employee {
     name = n;
     position = pos;
     }
+
+    public String getEmpId() {
+        return empId;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getPosition() {
+        return position;
+    }
+
+    public int getAge() {
+        return age;
+    }
 }
