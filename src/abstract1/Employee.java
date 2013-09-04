@@ -9,7 +9,7 @@ public abstract class Employee {
     name = n;
     position = pos;
     this.age = age;
-    
+  
     }
 
     public String getEmpId() {

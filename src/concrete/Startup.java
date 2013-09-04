@@ -5,7 +5,7 @@ import java.text.DecimalFormat;
 public class Startup {
     public static void main(String[] args)
     {
-        DecimalFormat dollar = new DecimalFormat("$###,###,###.00");
+DecimalFormat dollar = new DecimalFormat("$###,###,###.00");
         
         HourlyEmployee emp1 = new HourlyEmployee("001", "Stan Smith", "Janitor", 44, 19, 35);
         emp1.displayInfo();
