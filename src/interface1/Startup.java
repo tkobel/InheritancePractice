@@ -17,7 +17,8 @@ public class Startup {
         System.out.println();
         
         SalaryPlusBonusEmployee emp3 = new SalaryPlusBonusEmployee("223", "Bill Cole", "President", 45, 150000, 1000);
-        emp3.displayInfo();;
+        emp3.displayInfo();
+        System.out.println("Weekly bonus: " + dollar.format(emp3.getBonus()));
         System.out.println("Weekly pay: " + dollar.format(emp3.calcPaycheck()));
         System.out.println();
     }

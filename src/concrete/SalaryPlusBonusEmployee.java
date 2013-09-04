@@ -7,11 +7,14 @@ public class SalaryPlusBonusEmployee extends SalariedEmployee{
         super(id, n, pos, age, sal);
         bonus = bon;
     }
+
+    public double getBonus() {
+        return bonus;
+    }
     
-    public double calcPaycheck(boolean earnedBonus){
-        if(earnedBonus){
-            return super.getSalary()/52 + bonus;
-        }
-        return super.getSalary()/52;
+ 
+    @Override
+    public double calcPaycheck(){
+        return super.getSalary()/52 + bonus;
     }
 }

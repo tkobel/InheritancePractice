@@ -14,6 +14,10 @@ public class SalaryPlusBonusEmployee implements IEmployee{
         salary = sal;
         bonus = bon;
     }
+
+    public double getBonus() {
+        return bonus;
+    }
     
     @Override
     public void displayInfo(){

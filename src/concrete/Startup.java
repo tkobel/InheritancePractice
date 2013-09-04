@@ -23,8 +23,8 @@ DecimalFormat dollar = new DecimalFormat("$###,###,###.00");
         SalaryPlusBonusEmployee emp3 = new SalaryPlusBonusEmployee("003", "Jeff Johnson", "CEO", 61, 100000, 3000);
         emp3.displayInfo();
         System.out.println("Salary: " + dollar.format(emp3.getSalary()));
+        System.out.println("Weekly bonus: " + dollar.format(emp3.getBonus()));
         System.out.println("Weekly pay: " + dollar.format(emp3.calcPaycheck()));
-        System.out.println();
     }
     
 }
