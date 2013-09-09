@@ -2,29 +2,29 @@ package abstract1;
 
 public class HourlyEmployee extends Employee {
 
-    private double payRate, hours;
+    private double hourlyWage, hoursWorked;
 
-    public HourlyEmployee(String id, String n, String pos, int age,
-            double rate, double hrs) {
-        super(id, n, pos, age);
-        payRate = rate;
-        hours = hrs;
+    public HourlyEmployee(String employeeId, String name, String position, int age,
+            double hourlyWage, double hoursWorked) {
+        super(employeeId, name, position, age);
+        this.hourlyWage = hourlyWage;
+        this.hoursWorked = hoursWorked;
     }
 
-    public double getPayRate() {
-        return payRate;
+    public double getHourlyWage() {
+        return hourlyWage;
     }
 
-    public double getHours() {
-        return hours;
+    public double getHoursWorked() {
+        return hoursWorked;
     }
 
     @Override
-    public double calcPaycheck() {
-        double paycheck = 0;
-        if (hours > 40) {
-            paycheck += (hours - 40) * payRate / 2;
+    public double calculatePaycheck() {
+        double paycheckAmount = 0;
+        if (hoursWorked > 40) {
+            paycheckAmount += (hoursWorked - 40) * hourlyWage / 2;
         }
-        return paycheck += hours * payRate;
+        return paycheckAmount += hoursWorked * hourlyWage;
     }
 }

@@ -1,19 +1,19 @@
 package abstract1;
 
 public class SalariedEmployee extends Employee{
-    private double salary;
+    private double yearlySalary;
     
-    public SalariedEmployee(String id, String n, String pos, int age, double sal){
-    super(id, n, pos, age);
-    salary = sal;
+    public SalariedEmployee(String employeeId, String name, String position, int age, double yearlySalary){
+    super(employeeId, name, position, age);
+    this.yearlySalary = yearlySalary;
     }
 
-    public double getSalary() {
-        return salary;
+    public double getYearlySalary() {
+        return yearlySalary;
     }
 
     @Override
-    public double calcPaycheck(){
-        return salary/52;
+    public double calculatePaycheck(){
+        return yearlySalary/52;
     }
 }

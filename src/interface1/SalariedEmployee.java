@@ -1,28 +1,29 @@
 package interface1;
 
 public class SalariedEmployee implements IEmployee {
-    private String empId, name, position;
+    private String employeeId, name, position;
     private int age;
-    private double salary;
+    private double yearlySalary;
     
-    public SalariedEmployee(String id, String n, String pos, int age, double sal){
-        empId = id;
-        name = n;
-        position = pos;
+    public SalariedEmployee(String employeeId, String name, String position,
+                            int age, double yearlySalary){
+        this.employeeId = employeeId;
+        this.name = name;
+        this.position = position;
         this.age = age;
-        salary = sal;
+        this.yearlySalary = yearlySalary;
     }
     
     @Override
     public void displayInfo(){
-        System.out.println("Employee No.: " + empId);
+        System.out.println("Employee No.: " + employeeId);
         System.out.println("Name: " + name);
         System.out.println("Age: " + age);
         System.out.println("Position: " + position);
     }
     
     @Override
-    public double calcPaycheck(){
-        return salary / 52;
+    public double calculatePaycheck(){
+        return yearlySalary / 52;
     }
 }

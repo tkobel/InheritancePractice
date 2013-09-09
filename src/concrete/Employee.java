@@ -1,19 +1,19 @@
 package concrete;
 
 public class Employee {
-    private String empId, name, position;
+    private String employeeId, name, position;
     private int age;
     
-    public Employee(String id, String n, String pos, int age){
-    empId = id;
-    name = n;
-    position = pos;
+    public Employee(String empId, String name, String position, int age){
+    this.employeeId = employeeId;
+    this.name = name;
+    this.position = position;
     this.age = age;
     
     }
 
-    public String getEmpId() {
-        return empId;
+    public String getEmployeeId() {
+        return employeeId;
     }
 
     public String getName() {
@@ -28,7 +28,7 @@ public class Employee {
         return age;
     }
     public void displayInfo(){
-        System.out.println("Employee No.: " + empId);
+        System.out.println("Employee No.: " + employeeId);
         System.out.println("Name: " + name);
         System.out.println("Age: " + age);
         System.out.println("Position: " + position);

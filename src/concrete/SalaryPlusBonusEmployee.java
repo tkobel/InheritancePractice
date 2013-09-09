@@ -1,20 +1,20 @@
 package concrete;
 
 public class SalaryPlusBonusEmployee extends SalariedEmployee{
-    double bonus;
-    public SalaryPlusBonusEmployee(String id, String n, String pos, int age,
-                                   double sal, double bon){
-        super(id, n, pos, age, sal);
-        bonus = bon;
+    double weeklyBonus;
+    public SalaryPlusBonusEmployee(String employeeId, String name, String position, int age,
+                                   double yearlySalary, double weeklyBonus){
+        super(employeeId, name, position, age, yearlySalary);
+        this.weeklyBonus = weeklyBonus;
     }
 
-    public double getBonus() {
-        return bonus;
+    public double getWeeklyBonus() {
+        return weeklyBonus;
     }
     
  
     @Override
-    public double calcPaycheck(){
-        return super.getSalary()/52 + bonus;
+    public double calculatePaycheck(){
+        return super.getYearlySalary()/52 + weeklyBonus;
     }
 }

@@ -1,20 +1,20 @@
 package abstract1;
 
 public class SalaryPlusBonusEmployee extends SalariedEmployee{
-    private double bonus;
+    private double weeklyBonus;
     
-    public SalaryPlusBonusEmployee(String id, String n, String pos, int age,
-                                   double sal, double bon){
-        super(id, n, pos, age, sal);
-        bonus = bon;
+    public SalaryPlusBonusEmployee(String employeeId, String name, String position, int age,
+                                   double yearlySalary, double weeklyBonus){
+        super(employeeId, name, position, age, yearlySalary);
+        this.weeklyBonus = weeklyBonus;
     }
 
     public double getWeeklyBonus() {
-        return bonus;
+        return weeklyBonus;
     }
 
     @Override
-    public double calcPaycheck(){
-        return super.getSalary()/52 + bonus;
+    public double calculatePaycheck(){
+        return super.getYearlySalary()/52 + weeklyBonus;
     }
 }
